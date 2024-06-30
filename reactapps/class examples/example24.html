@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Emp {
+        constructor(ename, salary) {
+          this.ename = ename;
+          this.salary = salary;
+          document.write("Emp cons called...<br>");
+        }
+        toString() {
+          return `${this.ename}, ${this.salary}<br>`;
+        }
+      }
+      class Manager extends Emp {}
+      let boss = new Manager("Amit", 50000.0);
+      document.write(boss);
+    </script>
+  </head>
+  <body></body>
+</html>

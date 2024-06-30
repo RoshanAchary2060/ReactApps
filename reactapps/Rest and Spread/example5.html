@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rest Parameter</title>
+    <script>
+      function marksheet1(name, ...args) {
+        let sum = 0;
+        for (let x of args) {
+          sum += x;
+        }
+        document.write("Name is " + name + ", Total marks are " + sum + "<br>");
+      }
+      function marksheet2(name) {
+        let sum = 0;
+        for (let x of arguments) {
+          sum += x;
+        }
+        document.write("Name is " + name + " Total marks are " + sum + "<br>");
+      }
+      marksheet1("Amit", 40, 50);
+      marksheet2("Deepak", 40, 50);
+    </script>
+  </head>
+  <body></body>
+</html>

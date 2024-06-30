@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Spread Operator</title>
+    <script>
+      function add(a, b) {
+        //  here ... is rest parameter
+        let sum = a + b;
+        document.write("Sum is " + sum + "<br>");
+      }
+      add(10, 20);
+      let arr = [10, 20];
+      add(...arr); // ... is spread operator
+    </script>
+  </head>
+  <body></body>
+</html>
+<!-- toString() of array is called and concatenated -->

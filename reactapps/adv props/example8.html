@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Demo</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      function Greetings(username) {
+        document.write(Greetings.message + username);
+        document.write(
+          "<br>" + Greetings.length + " is the number of arguments"
+        );
+      }
+      Greetings.message = "Good Evening";
+      Greetings("Sachin");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!-- Rewrite the previous React component so that if the number generated is 6, then
+it should display Congratulations!!! You won and should also display an image called congrats.gif store in images folder -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MyFirstReactApp</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function getNumber() {
+        let myNums = [10, 4, 5, 6, 7, 8, 66, 44, 55, 66, 71, 32];
+        let num = myNums[Math.floor(Math.random() * myNums.length)];
+        return num;
+      }
+      function MyNum() {
+        const num = getNumber();
+        let msg = "";
+        if (num == 6) {
+        }
+        return (
+          <div>
+            <p>Number is {num}</p>
+            {msg}
+          </div>
+        );
+      }
+      ReactDOM.render(<MyNum />, document.querySelector("#root"));
+    </script>
+  </body>
+</html>

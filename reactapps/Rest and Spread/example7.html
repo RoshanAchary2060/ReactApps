@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Spread Operator</title>
+    <script>
+      function add(a, b) {
+        let sum = a + b;
+        document.write("Sum is " + sum + "<br>");
+      }
+      add(10, 20);
+      let arr = [10, 20, 30, 40]; // two values will not be received
+      add(...arr);
+    </script>
+  </head>
+  <body></body>
+</html>
+<!-- toString() of array is called and concatenated -->

@@ -1,0 +1,40 @@
+<!-- Contact List
+        . Mr. Sachin Kapoor
+        . Mr. Paramjeet Singh
+        . Mr. Afroz Alam -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      function MyApp() {
+        let heading = React.createElement("h1", null, "Contact List");
+        let ul = React.createElement("ul", null, [
+          React.createElement("li", null, "Sachin Kapoor"),
+          React.createElement("li", null, "Paramjeet Singh"),
+          React.createElement("li", null, "Sajeeb Sharma"),
+          React.createElement("li", null, "Afroj"),
+        ]);
+        let div = React.createElement("div", null, [heading, ul]);
+        return div;
+      }
+      ReactDOM.render(
+        React.createElement(MyApp),
+        document.querySelector("#root")
+      );
+    </script>
+  </body>
+</html>

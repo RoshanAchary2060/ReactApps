@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Vehicle {
+        accelerate() {
+          document.write("accelerating...<br>");
+        }
+      }
+      class Car extends Vehicle {
+        constructor() {
+          super(); // This line is compulsory even though vehicle has default constructor
+          document.write("Instantiating car...<br>");
+        }
+        reverse() {
+          document.write("reversing...<br>");
+        }
+      }
+      let myCar = new Car();
+      myCar.accelerate();
+      myCar.reverse();
+      document.write("Color of the car is " + myCar.color);
+    </script>
+  </head>
+  <body></body>
+</html>

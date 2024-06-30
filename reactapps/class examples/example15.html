@@ -1,0 +1,35 @@
+<!-- Create a class called Car having the following:
+A constructor for initializing car name and year
+A method called age() that returns the age of the car
+Overridden version of toString() -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Car {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+        getAge() {
+          let today = new Date();
+          let currYear = today.getFullYear();
+          return currYear - this.year;
+        }
+        toString() {
+          return `${this.name}, ${this.year}<br>`;
+        }
+      }
+      let ford = new Car("Mustang", 2018);
+      let maruti = new Car("Ertiga", 2020);
+      document.write(ford);
+      document.write(`Its age is ${ford.getAge()}<br>`);
+      document.write(maruti);
+      document.write(`Its age is ${maruti.getAge()}`);
+    </script>
+  </head>
+  <body></body>
+</html>

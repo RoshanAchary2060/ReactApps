@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This code will give error</title>
+    <script>
+      class Vehicle {
+        constructor() {
+          document.write("Instantiating vehicle...<br>");
+        }
+        accelerate() {
+          document.write("accelerating...<br>");
+        }
+      }
+      class Car extends Vehicle {
+        constructor() {
+          super();
+          document.write("Instantiating car...<br>");
+          super(); // this line is erroneous
+        }
+        reverse() {
+          document.write("reversing...<br>");
+        }
+      }
+      let myCar = new Car();
+      myCar.accelerate();
+      myCar.reverse();
+    </script>
+  </head>
+  <body></body>
+</html>

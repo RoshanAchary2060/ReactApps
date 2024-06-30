@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Emp {
+        constructor() {
+          this.ename = "Amit";
+          this.salary = 45000.0;
+          document.write(this + "<br>");
+          document.write(this.toString() + "<br>");
+          document.write(typeof this + "<br>");
+        }
+      }
+      let e1 = new Emp();
+      document.write(e1.ename + " " + e1.salary);
+    </script>
+  </head>
+  <body></body>
+</html>

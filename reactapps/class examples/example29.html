@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getter/Setter Properties</title>
+    <script>
+      class Person {
+        constructor(fname, lname) {
+          this.fname = fname;
+          this.lname = lname;
+        }
+        get fullName() {
+          return this.fname + " " + this.lname;
+        }
+        set fullName(name) {
+          name = name.split(" ");
+          this.fname = name[0];
+          this.lname = name[1];
+        }
+      }
+      let p = new Person("Amit", "Singh");
+      document.write("Full name is " + p.fullName);
+      p.fullName = "Prashasti Tiwari";
+      document.write("<br>After changing name,");
+      document.write("<br>Full name is" + p.fname + " " + p.lname);
+    </script>
+  </head>
+  <body></body>
+</html>

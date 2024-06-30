@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rest Parameter</title>
+    <script>
+      function show1(...args) {
+        args.forEach((e) => {
+          document.write(e + "<br>");
+        });
+      }
+      function show2() {
+        arguments.forEach((e) => {
+          document.write(e + "<br>");
+        });
+      }
+      document.write("Using Rest Parameter<br>");
+      show1(10, 20, 30, 40);
+      document.write("<br>Using Arguments object<br>");
+      show2(10, 20, 30, 40);
+    </script>
+  </head>
+  <body></body>
+</html>

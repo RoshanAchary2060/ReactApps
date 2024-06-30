@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Emp {
+        constructor(name, salary) {
+          this.name = name;
+          this.salary = salary;
+          document.write("Emp cons called...<br>");
+        }
+        raiseSalary() {
+          this.salary = this.salary + this.salary * 0.1;
+        }
+      }
+      class Manager extends Emp {
+        constructor(name, salary, bonus) {
+          super(name, salary);
+          this.bonus = bonus;
+        }
+        raiseSalary() {
+          super.raiseSalary();
+          this.bonus = this.bonus + this.bonus * 0.1;
+        }
+        toString() {
+          return `${this.name}, ${this.salary}, ${this.bonus}<br>`;
+        }
+      }
+      let boss = new Manager("Amit", 50000.0, 25000.0);
+      document.write("Before increasing salary and bonus<br>");
+      document.write(boss);
+      boss.raiseSalary();
+      document.write("After increasing salary and bonus<br>");
+      document.write(boss);
+      boss.raiseSalary();
+    </script>
+  </head>
+  <body></body>
+</html>

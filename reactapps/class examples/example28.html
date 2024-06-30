@@ -1,0 +1,42 @@
+<!-- Create a class called Circle having the following :
+A constructor for initializing radius
+A method called area() that returns the area of the circle
+Now create a child class of Circle called Cylinder having the following :
+A constructor for initializing height
+A method called area() that returns the area of the cylinder
+A method called volume() that returns the volume of the cylinder -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Circle {
+        constructor(radius) {
+          this.radius = radius;
+        }
+        area() {
+          return Math.PI * Math.pow(this.radius, 2);
+        }
+      }
+      class Cylinder extends Circle {
+        constructor(radius, height) {
+          super(radius);
+          this.height = height;
+        }
+        area() {
+          return 2 * super.area() + 2 * Math.PI * this.radius * this.height;
+          // we cannot access properties of parent class using super
+        }
+        volume() {
+          return super.area() * this.height;
+        }
+      }
+      let cy = new Cylinder(10, 20);
+      document.write("Area is " + cy.area());
+      document.write("<br>Volume is " + cy.volume());
+    </script>
+  </head>
+  <body></body>
+</html>

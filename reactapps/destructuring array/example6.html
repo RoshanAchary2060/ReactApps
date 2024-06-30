@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring Nested Array</title>
+    <script>
+      let person = ["Gagan", 21, 50000, ["BTech", "MBA", "Phd"]];
+      let [name, age, sal, [deg1, deg2, deg3]] = person;
+      document.write("Name:" + name + ", Age:" + age + ", Sal:" + sal);
+      document.write("<br>Deg1:" + deg1 + ", Deg2:" + deg2 + ", Deg3:" + deg3);
+    </script>
+  </head>
+  <body></body>
+</html>

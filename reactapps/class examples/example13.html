@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      class Emp {
+        constructor(ename, salary) {
+          this.ename = ename;
+          this.salary = salary;
+        }
+        raiseSalary(raisep) {
+          this.salary = this.salary + (this.salary * raisep) / 100;
+        }
+      }
+      let e1 = new Emp("Amit", 50000.0);
+      document.write("Before incrementing:<br>");
+      document.write(e1.ename + " " + e1.salary + "<br>");
+      let e2 = new Emp("Sumit", 65000.0);
+      document.write(e2.ename + " " + e2.salary);
+      e1.raiseSalary(10);
+      e2.raiseSalary(20);
+      document.write("<br>After incrementing:<br>");
+      document.write(e1.ename + " " + e1.salary + "<br>");
+      document.write(e2.ename + " " + e2.salary);
+    </script>
+  </head>
+  <body></body>
+</html>
